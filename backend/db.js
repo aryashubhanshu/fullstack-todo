@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://admin:987654321987@cluster0.wxapiuk.mongodb.net/fullstack_todo"
-);
+mongoose.connect(process.env.MONGODB_URL);
 
 const todoSchemea = mongoose.Schema({
   title: String,
